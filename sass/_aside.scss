@@ -1,0 +1,175 @@
+.aside {
+	padding: 1.2rem;
+	border-radius: 5px;
+	grid-column: 9 / -1;
+
+	@media screen and (max-width: $bp-smaller) {
+		display: none;
+	}
+
+	&__search {
+		border-radius: 20rem;
+		background-color: $grey-light-1;
+		height: 4.5rem;
+		margin-bottom: 2rem;
+
+		display: flex;
+
+		align-items: center;
+
+		padding-left: 2rem;
+		&--icon {
+			height: 5.5rem;
+			width: 5.5rem;
+			padding: 1rem;
+			color: $grey-light-6;
+		}
+
+		&--input {
+			width: 100%;
+			border: none;
+			outline: none;
+			background-color: $grey-light-1;
+			&::placeholder {
+				font-size: 1.5rem;
+			}
+		}
+	}
+
+	&__trends {
+		background-color: $primary-light-4;
+		padding-top: 2rem;
+
+		border-radius: 1.8rem;
+		&--header {
+			font-weight: 700;
+			margin-bottom: 2rem;
+			margin-left: 1rem;
+			cursor: pointer;
+		}
+		&--item {
+			display: flex;
+			justify-content: space-between;
+			transition: all 0.2s;
+			padding: 1rem;
+			transition: all 0.3s;
+			&:hover {
+				background-color: $grey-light-2;
+				cursor: pointer;
+			}
+		}
+		&--name {
+			font-weight: bold;
+			margin-bottom: 1rem;
+			font-size: 1.6rem;
+		}
+		&--par,
+		&--tweets {
+			font-size: 1.3rem;
+			margin-bottom: 1rem;
+			color: $grey-light-6;
+		}
+		&--icon {
+			width: 2.4rem;
+			height: 2.4rem;
+		}
+		&--show-more {
+			color: $primary;
+			font-size: 1.5rem;
+			cursor: pointer;
+			padding: 1.5rem;
+		}
+	}
+	&__follow {
+		background-color: $primary-light-4;
+		margin-top: 3rem;
+		border-radius: 1.5rem;
+
+		&--heading {
+			margin-bottom: 2rem;
+			padding: 1.5rem;
+		}
+		&--box {
+			display: flex;
+			flex-direction: column;
+		}
+		&--item {
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			padding: 1.5rem 0;
+			padding: 1.5rem;
+			transition: all 0.3s;
+			&:hover {
+				background-color: $grey-light-2;
+				cursor: pointer;
+			}
+		}
+		&--profile {
+			display: flex;
+			align-items: center;
+			gap: 1rem;
+		}
+		&--text {
+			font-size: 1.5rem;
+			line-height: 1;
+		}
+		&--name {
+			font-weight: bold;
+			display: block;
+			margin-bottom: 0.5rem;
+		}
+		&--icon {
+			width: 2rem;
+			height: 2rem;
+			vertical-align: middle;
+			height: 100%;
+			stroke: $primary-light-1;
+		}
+		&--handle {
+			color: $grey-light-6;
+		}
+		&--btn {
+			background-color: $grey-dark-1;
+			color: #fff;
+			padding: 1rem 2rem;
+			border: none;
+			outline: none;
+			border-radius: 50rem;
+			font-weight: bold;
+		}
+
+		&--profile img {
+			width: 5rem;
+			height: 5rem;
+			border-radius: 50%;
+		}
+		&--show-more {
+			color: $primary;
+			font-size: 1.6rem;
+			margin-top: 2rem;
+			padding: 1.5rem;
+		}
+	}
+	.footer {
+		margin-top: 3rem;
+
+		&__list {
+			list-style: none;
+			display: flex;
+			gap: 1.5rem;
+			flex-wrap: wrap;
+			align-items: center;
+		}
+		&__link {
+			text-decoration: none;
+			color: $grey-light-6;
+			font-size: 1.3rem;
+		}
+		&__text {
+			margin-top: 0.5rem;
+			color: $grey-light-6;
+			font-size: 1.3rem;
+		}
+	}
+}

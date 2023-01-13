@@ -1,0 +1,172 @@
+.main-content {
+	// padding: 1rem;
+	grid-column: 3 / 9;
+	@include border-thin;
+
+	@media screen and(max-width: $bp-small) {
+		// grid-column: 4 / 9;
+	}
+	@media screen and (max-width: $bp-smaller) {
+	}
+	@media screen and(max-width: $bp-smallest) {
+		grid-column: 1 / -1;
+	}
+
+	&__header {
+		display: flex;
+		justify-content: space-between;
+		margin: 1rem;
+
+		&--icon {
+			width: 2.4rem;
+			height: 2.4rem;
+		}
+	}
+	.tweet__form {
+		width: 100%;
+		@include border-bottom-thin;
+		&--input {
+			display: flex;
+			align-items: center;
+			gap: 2rem;
+			margin-bottom: 2rem;
+
+			.input {
+				width: 100%;
+
+				border: none;
+				outline: none;
+				font-size: 1.8rem;
+				&::placeholder {
+					font-size: 1.7rem;
+				}
+			}
+			&--img {
+				width: 5.5rem;
+				height: 5.5rem;
+				padding-left: 1rem;
+				padding-top: 1rem;
+				border-radius: 50%;
+			}
+		}
+		&--icons {
+			margin-left: 7rem;
+			display: flex;
+			gap: 1.2rem;
+			align-items: center;
+			margin-right: 1rem;
+
+			padding: 2rem;
+		}
+		&--icon {
+			width: 2rem;
+			height: 2rem;
+			color: $primary-light-1;
+		}
+		&--btn {
+			@extend .button;
+			color: #fff;
+			background-color: rgba($primary-light-1, 0.5);
+			cursor: default;
+			padding: 1rem 2rem;
+			font-size: 1.3rem;
+			margin-left: auto;
+		}
+	}
+
+	&__tweet-count {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		@include border-bottom-thin;
+	}
+	&__tweet-text {
+		font-size: 1.6rem;
+		padding: 2rem 0;
+		color: $primary-light-1;
+		text-transform: capitalize;
+	}
+	&__tweet--box {
+		padding-top: 1rem;
+		display: flex;
+		gap: 1rem;
+		transition: all 0.3s;
+		&:hover {
+			background-color: $grey-light-7;
+			cursor: pointer;
+		}
+
+		&__profile img {
+			width: 4.5rem;
+			height: 4.5rem;
+			border-radius: 50%;
+		}
+		&__content {
+			&--text {
+				font-size: 1.7rem;
+			}
+		}
+		&__header {
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			margin-bottom: 0;
+			&--text {
+				font-size: 1.6rem;
+				line-height: 1.2;
+				&--name {
+					font-weight: bold;
+				}
+				&--handle {
+					font-size: 1.6rem;
+					color: $grey-light-6;
+				}
+			}
+			&--icon {
+				width: 2rem;
+				height: 2rem;
+
+				vertical-align: middle;
+			}
+		}
+		&__img {
+			width: 95%;
+			border-radius: 1.5rem;
+			margin: 1.5rem auto;
+			@include border-thin;
+			@media screen and(max-width: $bp-small) {
+				width: 85%;
+			}
+		}
+		&__info {
+			display: flex;
+			align-items: center;
+			gap: 2rem;
+			padding: 1rem 0;
+			@media screen and(max-width: $bp-small) {
+				gap: 1rem;
+				justify-content: flex-start;
+			}
+			&--text {
+				color: $grey-light-6;
+				font-size: 1.3rem;
+				@media screen and(max-width: $bp-small) {
+					font-size: 1rem;
+				}
+			}
+			&__item {
+				display: flex;
+				align-items: center;
+				gap: 1rem;
+				@media screen and(max-width: $bp-small) {
+					gap: 0.5rem;
+				}
+			}
+			&--icon {
+				width: 2.4rem;
+				height: 2.4rem;
+				stroke: $grey-light-6;
+			}
+		}
+	}
+}

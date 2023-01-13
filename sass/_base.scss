@@ -1,0 +1,61 @@
+// ***************
+//VARIABLES
+//***************
+$primary: #1a8cd8;
+$primary-light-1: #1d9bf0;
+$primary-light-3: #e8f5fd;
+$primary-light-4: #f7f9f9;
+
+$grey-light-1: #eff3f4;
+$grey-light-2: #e7e7e8;
+$grey-light-3: #eff1f1;
+$grey-light-5: #e7e7e8;
+
+$grey-light-4: #9da7ae;
+$grey-light-6: #5d6d79;
+$grey-light-7: #f7f7f7;
+$grey-dark-1: #0f1419;
+
+// **************************
+///BREAK POINT VARIABLES*****
+/// *************************
+$bp-large: 81.25em;
+$bp-medium: 67.5em;
+$bp-small: 64em;
+$bp-smaller: 56.25em;
+$bp-smallest: 31.25em;
+
+*,
+*::before,
+*::after {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+html {
+	font-size: 62.5%; // 1rem =10px
+	@media screen and(max-width: $bp-small) {
+		font-size: 60%;
+	}
+	@media screen and(max-width: $bp-small) {
+		font-size: 62.5%;
+	}
+}
+body {
+	max-width: 135rem;
+	margin: auto;
+	font-family: 'Roboto', sans-serif;
+	font-weight: 400;
+	padding: 0 3rem;
+	display: grid;
+	grid-template-columns: repeat(12, 1fr);
+	gap: 2rem;
+
+	@media screen and (max-width: $bp-smaller) {
+		grid-template-columns: max-content min-content;
+	}
+	@media screen and(max-width: $bp-smallest) {
+		grid-template-columns: minmax(15rem, min-content);
+		padding: 0;
+	}
+}

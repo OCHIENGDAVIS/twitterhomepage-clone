@@ -1,0 +1,7 @@
+@mixin border-bottom-thin {
+	border-bottom: 1px solid $grey-light-1;
+}
+
+@mixin border-thin {
+	border: 2px solid $grey-light-1;
+}
